@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Perfumy</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="header">
-            <nav>
-                <h1>Perfumy</h1>
-                <ul>
-                    <li>Home |</li>
-                    <li>Products |</li>
-                    <li>About us |</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Booksky</h1>
+    </div>
+    <div class="container">
+        <div class="book-container">
+            <h2>Book title</h2>
+            <h4>Author</h4>
+            <p>Description</p>
+            <button onclick="del(event)">Delete</button>
         </div>
-        <div class="searchbar">
-            <input placeholder="search">
+        <div class="popup-overlay"></div>
+        <div class="popup-box">
+            <h2>Add book</h2>
+            <form>
+                <input type="text" placeholder="Book title" id="book-title-input">
+                <input type="text" placeholder="Book author" id="book-author-input">
+                <textarea placeholder="Short description" id="description-input"></textarea>
+                <button id="add-book">ADD</button>
+                <button id="cancel-popup">CANCEL</button>
+            </form>
         </div>
-        <div class="product">
-            <div class="box">
-                <img src="one.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim beatae quas voluptate labore perspiciatis placeat!</p>
-            </div>
-            <div class="box">
-                <img src="two.jpg">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus culpa porro rem beatae, pariatur illo!</p>
-            </div>
-            <div class="box">
-                <img src="three.jpg">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias esse nemo recusandae saepe, deserunt ipsa.</p>
-            </div>
-        </div>
-        <div class="about">
-            <h1 style="display: block;">About us</h1>
-            <p style="font-size: 20px;">ectus reiciendis aspernatur necessitatibus, inventore praesentium autem sequi earum. psa tempora eius sed molestiae eveniet perferendis natus architecto quaerat. Veritatis laudantium repellat a velit repudiandae deleniti illo distinctio, fuga beatae? Repudiandae dolor et hic dolorem harum ullam nobis? Reprehenderit, quos illo et architecto quia at.</p>
-
-        </div>
-        <div class="contact">
-            <h3>Contact</h3>
-            <p>+91 6385628892</p>
-            <p>kishore7708@gmail.com</p>
-            <p style="margin:20px; font-size: 15px;"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, provident numquam dolores eius ipsam, in accusantium nihil nisi ea fugiat excepturi quis facilis mollitia sapiente maiores placeat ad ullam eaque distinctio minus quas inventore iure eligendi. Impedit dolores minus non!</p>
-
-        </div>       
-    </body>
+        <button class="add-button" id="popup-button">+</button>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
